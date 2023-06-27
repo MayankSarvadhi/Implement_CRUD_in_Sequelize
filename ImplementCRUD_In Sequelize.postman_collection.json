@@ -1,0 +1,1117 @@
+{
+	"info": {
+		"_postman_id": "20925d0e-a0b2-40ab-bd68-810662852c65",
+		"name": "ImplementCRUD_In Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28042243"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "addEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Akash\",\n    \"LastName\":\"Kumbhani\",\n    \"Email\":\"Akash@gmail.com\",\n    \"Phone\":1238869870\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Employee",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addEmployee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"FirstName\":\"Bhargav3\",\n    \"LastName\":\"Makwana\",\n    \"Email\":\"BMkl4@gmail.com\",\n    \"Phone\":1234569870\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Employee",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Employee"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f5-A/QRDsJ5+YCMchcRkJ+a3P5y6ec\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 12:28:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 5,\n        \"FirstName\": \"Bhargav3\",\n        \"LastName\": \"Makwana\",\n        \"Email\": \"BMkl4@gmail.com\",\n        \"Phone\": \"1234569870\",\n        \"updatedAt\": \"2023-06-26T12:28:37.161Z\",\n        \"createdAt\": \"2023-06-26T12:28:37.161Z\"\n    },\n    \"message\": \"Employees Inserted Successfully\"\n}"
+						},
+						{
+							"name": "BulkaddEmployee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n    \"FirstName\":\"Bhargav4\",\n    \"LastName\":\"Makwana\",\n    \"Email\":\"BMkl5@gmail.com\",\n    \"Phone\":1234569870\n},\n{\n    \"FirstName\":\"Bhargav6\",\n    \"LastName\":\"Makwana\",\n    \"Email\":\"BMkl6@gmail.com\",\n    \"Phone\":1234569870\n},\n{\n    \"FirstName\":\"Bhargav7\",\n    \"LastName\":\"Makwana\",\n    \"Email\":\"BMkl7@gmail.com\",\n    \"Phone\":1234569870\n}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Employee",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Employee"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "611"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"263-w8s4l6sywUkQqlZSgJBggSqICNs\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 12:37:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"FirstName\": \"Bhargav4\",\n            \"LastName\": \"Makwana\",\n            \"Email\": \"BMkl5@gmail.com\",\n            \"Phone\": \"1234569870\",\n            \"createdAt\": \"2023-06-26T12:37:42.505Z\",\n            \"updatedAt\": \"2023-06-26T12:37:42.505Z\"\n        },\n        {\n            \"id\": 8,\n            \"FirstName\": \"Bhargav6\",\n            \"LastName\": \"Makwana\",\n            \"Email\": \"BMkl6@gmail.com\",\n            \"Phone\": \"1234569870\",\n            \"createdAt\": \"2023-06-26T12:37:42.505Z\",\n            \"updatedAt\": \"2023-06-26T12:37:42.505Z\"\n        },\n        {\n            \"id\": 9,\n            \"FirstName\": \"Bhargav7\",\n            \"LastName\": \"Makwana\",\n            \"Email\": \"BMkl7@gmail.com\",\n            \"Phone\": \"1234569870\",\n            \"createdAt\": \"2023-06-26T12:37:42.505Z\",\n            \"updatedAt\": \"2023-06-26T12:37:42.505Z\"\n        }\n    ],\n    \"message\": \"Employees Inserted In Bulk Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteEmp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Employee/3",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Employee",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteEmp",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Employee/3",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Employee",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-h4by3YC/qjwQ9v9etevp9jmAGO4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 12:30:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Employees Delete Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"demosss\",\n    \"LastName\":\"testinghihi\",\n    \"Email\":\"demo@gmail.com\",\n    \"Phone\":9999999999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Employee/5",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Employee",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateEmployee",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"FirstName\":\"demosss\",\n    \"LastName\":\"testinghihi\",\n    \"Email\":\"demo@gmail.com\",\n    \"Phone\":9999999999\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Employee/5",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Employee",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"56-ldDuPXaGC9ym9G90+3XsJqxmKIc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 12:31:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        1\n    ],\n    \"message\": \"Employees Update Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "AddDepartment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\":\"Bhuro\",\n    \"Type\" : \"Tech\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Department",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Department"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Singale Insert",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n    \"Name\":\"Test1\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test2\",\n    \"Type\" : \"Non-Tech\"\n},\n{\n    \"Name\":\"test3\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test4\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test5\",\n    \"Type\" : \"Non-Tech\"\n}\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Department",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Department"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-ogM+vk+dS4iI8RQW4ShrD5Od7MU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 04:08:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"Name\": \"Bhuro\",\n        \"Type\": \"Non-Tech\",\n        \"updatedAt\": \"2023-06-27T04:08:53.170Z\",\n        \"createdAt\": \"2023-06-27T04:08:53.170Z\"\n    },\n    \"message\": \"Department Insert Successfully\"\n}"
+						},
+						{
+							"name": "Add in Bulk Department",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\n    \"Name\":\"Test1\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test2\",\n    \"Type\" : \"Non-Tech\"\n},\n{\n    \"Name\":\"test3\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test4\",\n    \"Type\" : \"Tech\"\n},\n{\n    \"Name\":\"test5\",\n    \"Type\" : \"Non-Tech\"\n}\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Department",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Department"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "666"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29a-LIeKoJzZY4GAzyDXNVxjEyCx2do\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 04:17:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"Name\": \"Test1\",\n            \"Type\": \"Tech\",\n            \"createdAt\": \"2023-06-27T04:17:00.652Z\",\n            \"updatedAt\": \"2023-06-27T04:17:00.652Z\"\n        },\n        {\n            \"id\": 4,\n            \"Name\": \"test2\",\n            \"Type\": \"Non-Tech\",\n            \"createdAt\": \"2023-06-27T04:17:00.652Z\",\n            \"updatedAt\": \"2023-06-27T04:17:00.652Z\"\n        },\n        {\n            \"id\": 5,\n            \"Name\": \"test3\",\n            \"Type\": \"Tech\",\n            \"createdAt\": \"2023-06-27T04:17:00.652Z\",\n            \"updatedAt\": \"2023-06-27T04:17:00.652Z\"\n        },\n        {\n            \"id\": 6,\n            \"Name\": \"test4\",\n            \"Type\": \"Tech\",\n            \"createdAt\": \"2023-06-27T04:17:00.652Z\",\n            \"updatedAt\": \"2023-06-27T04:17:00.652Z\"\n        },\n        {\n            \"id\": 7,\n            \"Name\": \"test5\",\n            \"Type\": \"Non-Tech\",\n            \"createdAt\": \"2023-06-27T04:17:00.652Z\",\n            \"updatedAt\": \"2023-06-27T04:17:00.652Z\"\n        }\n    ],\n    \"message\": \"Department Inserted In Bulk Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteDepartment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Department/4",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Department",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteDepartment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Department/4",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Department",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-4kx0iFbfJAikxwrgCqVsvfLhv6w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 04:18:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Department Delete Successfully\"\n}"
+						},
+						{
+							"name": "Erorr At DeleteDepartment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Department/4",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Department",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-diUkP8fVyBMcyD+ljaGfZemXoL8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 04:19:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"id = 4 is Not Found Enter Valid id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\":\"demo1\",\n    \"Type\":\"Non-Tech\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Department/5",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Department",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateData",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Name\":\"demo1\",\n    \"Type\":\"Tech\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Department/5",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Department",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"57-BEpHQLWfNYr5pqBjW2bMqm1P/zo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 04:27:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        1\n    ],\n    \"message\": \"Department Update Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Designation",
+			"item": [
+				{
+					"name": "insertDesignation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"Name\": \"Mayank\"\n    },\n    {\n        \"Name\": \"Demo1\"\n    },\n    {\n        \"Name\": \"Demo2\"\n    },\n    {\n        \"Name\": \"Demo3\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Designation",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Designation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add Designation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "Mayank",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-EW9+2saKhPfnOLC0axGhIA4WFp8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:06:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"Name\": \"Mayank\",\n        \"updatedAt\": \"2023-06-27T05:06:55.852Z\",\n        \"createdAt\": \"2023-06-27T05:06:55.852Z\"\n    },\n    \"message\": \"Designation Inserted Successfully\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"Name\": \"Mayank\"\n    },\n    {\n        \"Name\": \"Demo1\"\n    },\n    {\n        \"Name\": \"Demo2\"\n    },\n    {\n        \"Name\": \"Demo3\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e8-v5zRMtgXABCR5b8fZmMHBfPiVxY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:15:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"Name\": \"Mayank\",\n            \"createdAt\": \"2023-06-27T05:15:04.553Z\",\n            \"updatedAt\": \"2023-06-27T05:15:04.553Z\"\n        },\n        {\n            \"id\": 5,\n            \"Name\": \"Demo1\",\n            \"createdAt\": \"2023-06-27T05:15:04.553Z\",\n            \"updatedAt\": \"2023-06-27T05:15:04.553Z\"\n        },\n        {\n            \"id\": 6,\n            \"Name\": \"Demo2\",\n            \"createdAt\": \"2023-06-27T05:15:04.553Z\",\n            \"updatedAt\": \"2023-06-27T05:15:04.553Z\"\n        },\n        {\n            \"id\": 7,\n            \"Name\": \"Demo3\",\n            \"createdAt\": \"2023-06-27T05:15:04.553Z\",\n            \"updatedAt\": \"2023-06-27T05:15:04.553Z\"\n        }\n    ],\n    \"message\": \"Designation Inserted In Bulk Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteDesignation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Designation/4",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Designation",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteDesignation",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation/4",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-IlQjFHKVBcHTUBiEbmBVtjjT00E\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:17:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Designation Delete Successfully\"\n}"
+						},
+						{
+							"name": "Error in DeleteDesignation",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation/4",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-diUkP8fVyBMcyD+ljaGfZemXoL8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:18:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"id = 4 is Not Found Enter Valid id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateDesignation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\":\"sarvadhi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SEQUELIZE_URL}}/Designation/5",
+							"host": [
+								"{{SEQUELIZE_URL}}"
+							],
+							"path": [
+								"Designation",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Error updateDesignation",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Name\":\"sarvadhi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation/4",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-TC8d83jKtkB0CBaVj/Qixpp3LJ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:19:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"statusCode\": 404,\n    \"message\": \"id = 4 is Not Found Given Valid Id\"\n}"
+						},
+						{
+							"name": "updateDesignation",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Name\":\"sarvadhi\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SEQUELIZE_URL}}/Designation/5",
+									"host": [
+										"{{SEQUELIZE_URL}}"
+									],
+									"path": [
+										"Designation",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"58-Nt4XtmQV+tXWCOxp4rkJnfnb1go\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 05:21:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"data\": [\n        1\n    ],\n    \"message\": \"Designation Update Successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
